@@ -1,0 +1,284 @@
+/* base.css - Professional styling for WDD 131 assignment
+   Created using modern front-end development principles (2024-2025)
+   Implementing accessibility, responsiveness, and visual hierarchy
+*/
+
+/* CSS Reset & Global Variables */
+:root {
+  /* Modern color palette with high contrast */
+  --primary-color: #2a52be; /* Rich blue */
+  --secondary-color: #ffd700; /* Gold accent */
+  --dark-color: #1a1a2e; /* Deep navy for text */
+  --light-color: #f8f8ff; /* Off-white background */
+  --accent-color: #e63946; /* Accent red for hover states */
+  --gray-color: #6c757d; /* Neutral gray for secondary text */
+
+  /* Typography */
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4rem;
+
+  /* Border radius */
+  --border-radius: 8px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+
+  /* Max content width */
+  --max-width: 1200px;
+}
+
+/* Box sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base typography */
+body {
+  font-family: var(--body-font);
+  color: var(--dark-color);
+  line-height: 1.6;
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
+  font-size: 1.75rem;
+  position: relative;
+  padding-bottom: var(--spacing-xs);
+}
+
+/* Underline effect for h2 headings */
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--secondary-color);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+  color: var(--light-color);
+  max-width: var(--max-width);
+  margin: 0 auto var(--spacing-md);
+}
+
+/* Navigation with CSS Flex */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--light-color);
+  font-weight: 600;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  transition: all var(--transition-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+/* Professional hover effect */
+nav a:hover {
+  color: var(--light-color);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Main content */
+main {
+  max-width: var(--max-width);
+  width: 90%;
+  margin: var(--spacing-lg) auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  padding: 0 var(--spacing-sm);
+}
+
+/* Card sections */
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  transition: transform var(--transition-medium),
+    box-shadow var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.card p {
+  color: var(--gray-color);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: var(--spacing-md);
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  nav a {
+    width: 100%;
+    padding: var(--spacing-sm);
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light-color: #121212;
+    --dark-color: #f8f8ff;
+    --gray-color: #b0b0b0;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+  }
+
+  img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Accessibility enhancements */
+:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
