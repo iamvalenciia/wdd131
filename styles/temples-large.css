@@ -1,0 +1,46 @@
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  /* Change navigation to horizontal for larger screens */
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Hide hamburger button on larger screens */
+  .hamburger,
+  .close-btn {
+    display: none !important; /* Important to override inline styles */
+  }
+
+  /* Ensure nav is always visible on larger screens */
+  nav.hidden {
+    display: flex !important; /* Important to override hidden class */
+  }
+
+  /* Main grid changes to multiple columns for larger screens */
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  /* Optional: slightly larger font sizes for larger screens */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  figcaption {
+    font-size: 1.1rem;
+  }
+}
+
+/* For even larger screens */
+@media screen and (min-width: 1200px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
