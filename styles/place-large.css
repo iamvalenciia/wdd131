@@ -1,0 +1,58 @@
+@media screen and (min-width: 786px) {
+  main {
+    margin-bottom: 0;
+  }
+
+  .data {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    min-width: 300px;
+  }
+
+  .data h2 {
+    margin-bottom: 10px;
+  }
+
+  .data > div,
+  .weather > div {
+    padding: 20px;
+  }
+
+  .weather {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    min-width: 300px;
+  }
+
+  .weather > div:first-of-type {
+    /* display: flex; */
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 3px 0;
+  }
+
+  .weather > div:first-of-type h2 {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+  }
+
+  .weather > div:first-of-type h2::after {
+    content: "⛅";
+    font-size: 30px;
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+  }
+
+  .weather > div > svg {
+    display: none;
+  }
+  .weather-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,131 @@
+:root {
+  /* Professional Color Palette */
+  --deep-blue: #1a4b84; /* Rich, professional deep blue */
+  --ocean-teal: #2a7e19; /* Sophisticated green-teal */
+  --warm-gold: #d4af37; /* Elegant metallic gold */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  contain: paint; /* Helps browser optimize rendering */
+}
+
+/* Simplified CSS with fewer specifics */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f6f9;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  padding: 15px 0;
+  font-family: "Noto Serif", sans-serif;
+  background-color: var(--deep-blue);
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+main {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  will-change: transform; /* Hint to browser for optimization */
+}
+
+section {
+  margin: 10px;
+  text-align: center;
+  padding: 20px 10px;
+  display: block;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.data,
+.weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.data h2,
+.weather h2 {
+  grid-column: span 2;
+  padding: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.data h2 {
+  background-color: var(--warm-gold);
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.weather h2 {
+  background-color: var(--ocean-teal);
+  color: white;
+}
+
+.weather > div:first-of-type {
+  grid-column: span 2;
+}
+
+.data > div:first-of-type,
+.weather > div:nth-child(2) {
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.data > div:last-of-type,
+.weather > div:last-of-type {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: var(--deep-blue);
+}
+
+svg {
+  width: 150px;
+  height: 100px;
+  opacity: 0.9;
+  fill: var(--deep-blue);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer {
+  color: #2c3e50;
+  text-align: center;
+  padding: 15px 0;
+}
