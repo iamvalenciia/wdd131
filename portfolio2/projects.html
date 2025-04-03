@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Juan Valencia - Projects and Portfolio" />
+    <title>Projects | Juan Valencia</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navbar">
+        <div class="logo">
+          <a href="index.html">JV</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="projects-header">
+        <div class="container">
+          <h1>My Projects</h1>
+          <p>Explore some of my recent work and personal projects</p>
+        </div>
+      </section>
+
+      <section id="project-filters" class="filter-section">
+        <div class="container">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              All Projects
+            </button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="web">
+              Web Development
+            </button>
+            <button class="filter-btn" data-filter="data">Data Analysis</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-grid">
+        <div class="container">
+          <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="mobile">
+              <div class="project-image">
+                <img
+                  src="assets/images/placeholder.jpg"
+                  data-src="assets/images/project-ministrar.jpg"
+                  alt="Ministrar App"
+                  class="lazy-image"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Ministrar App</h3>
+                <p class="project-tags">Flutter | Supabase | CI/CD</p>
+                <p class="project-description">
+                  A mobile application developed with Flutter that integrates
+                  with Supabase backend services. Set up continuous integration
+                  and deployment workflows.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> View Project</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card" data-category="web">
+              <div class="project-image">
+                <img
+                  src="assets/images/placeholder.jpg"
+                  data-src="assets/images/project-chrome-extension.jpg"
+                  alt="Chrome Extension"
+                  class="lazy-image"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Data Validation Chrome Extension</h3>
+                <p class="project-tags">
+                  JavaScript | Chrome API | Data Validation
+                </p>
+                <p class="project-description">
+                  Automated Chrome extension that reduces response time by 20%
+                  for data validation tasks. Built for Graphite Systems Inc.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> View Project</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card" data-category="data">
+              <div class="project-image">
+                <img
+                  src="assets/images/placeholder.jpg"
+                  data-src="assets/images/project-dashboard.jpg"
+                  alt="BI Dashboard"
+                  class="lazy-image"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Business Intelligence Dashboard</h3>
+                <p class="project-tags">Looker Studio | BigQuery | SQL</p>
+                <p class="project-description">
+                  Interactive dashboards developed in Looker Studio and BigQuery
+                  for data-driven decision-making at FidelizaTech.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> View Project</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card" data-category="web">
+              <div class="project-image">
+                <img
+                  src="assets/images/placeholder.jpg"
+                  data-src="assets/images/project-portfolio.jpg"
+                  alt="Portfolio Website"
+                  class="lazy-image"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Portfolio Website</h3>
+                <p class="project-tags">HTML | CSS | JavaScript</p>
+                <p class="project-description">
+                  A responsive personal portfolio website showcasing my skills,
+                  experience, and projects. Features dynamic content loading and
+                  theme customization.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="project-link"
+                    ><i class="fas fa-external-link-alt"></i> View Project</a
+                  >
+                  <a href="#" class="project-link"
+                    ><i class="fab fa-github"></i> Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="add-project" class="add-project-section">
+        <div class="container">
+          <h2>Add New Project</h2>
+          <p>Save projects you want to add to your portfolio</p>
+          <div class="project-form">
+            <div class="form-group">
+              <label for="project-name">Project Name</label>
+              <input
+                type="text"
+                id="project-name"
+                placeholder="Enter project name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="project-category">Category</label>
+              <select id="project-category">
+                <option value="mobile">Mobile App</option>
+                <option value="web">Web Development</option>
+                <option value="data">Data Analysis</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="project-description">Description</label>
+              <textarea
+                id="project-description"
+                placeholder="Brief description of the project"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="project-technologies">Technologies Used</label>
+              <input
+                type="text"
+                id="project-technologies"
+                placeholder="E.g., JavaScript, React, Node.js"
+              />
+            </div>
+            <button id="save-project" class="btn">Save Project</button>
+          </div>
+          <div id="saved-projects-container" class="saved-projects">
+            <h3>Saved Projects</h3>
+            <ul id="saved-projects-list">
+              <!-- Saved projects will be inserted here via JavaScript -->
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <p>Juan Valencia</p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="references.html">References</a>
+          </div>
+          <div class="footer-social">
+            <a href="mailto:juanfrrin@gmail.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/juan-valencia-714a68201/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; <span id="current-year"></span> Juan Pablo Valencia. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/lazyload.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
