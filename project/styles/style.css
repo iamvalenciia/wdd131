@@ -1,0 +1,99 @@
+/* Using the color schema from your portfolio */
+:root {
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --secondary-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --text-color: #333;
+  --text-light: #777;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-dark);
+  text-align: center;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.color-sample {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.wireframe {
+  margin: 2rem 0;
+}
+
+.wireframe img {
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Font samples */
+.font-sample {
+  margin: 1rem 0;
+}
+
+.font-segoe {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
