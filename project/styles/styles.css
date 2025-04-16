@@ -1,20 +1,20 @@
 /* === Base Styles === */
 :root {
-  /* Color palette */
-  --primary-color: #3498db;
-  --primary-dark: #2980b9;
-  --secondary-color: #2c3e50;
-  --light-color: #ecf0f1;
-  --dark-color: #2c3e50;
-  --accent-color: #e74c3c;
-  --gray-light: #f5f5f5;
-  --gray-medium: #e0e0e0;
-  --gray-dark: #9e9e9e;
-  --text-color: #333;
-  --text-light: #777;
-  --text-dark: #222;
-  --success-color: #27ae60;
-  --error-color: #e74c3c;
+  /* Color palette - Colores mejorados para accesibilidad */
+  --primary-color: #2070b0; /* Azul más oscuro para mejor contraste */
+  --primary-dark: #17578a; /* Versión más oscura del primario */
+  --secondary-color: #2c3e50; /* Mantenido */
+  --light-color: #ecf0f1; /* Mantenido */
+  --dark-color: #2c3e50; /* Mantenido */
+  --accent-color: #c0392b; /* Rojo más oscuro para mejor contraste */
+  --gray-light: #f5f5f5; /* Mantenido */
+  --gray-medium: #9e9e9e; /* Oscurecido para mejor contraste */
+  --gray-dark: #606060; /* Oscurecido para mejor contraste */
+  --text-color: #333; /* Mantenido */
+  --text-light: #555; /* Oscurecido para mejor contraste (era #777) */
+  --text-dark: #222; /* Mantenido */
+  --success-color: #1e8a4a; /* Verde más oscuro para mejor contraste */
+  --error-color: #c0392b; /* Rojo más oscuro para mejor contraste */
 
   /* Typography */
   --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -44,19 +44,19 @@
   --radius-lg: 16px;
 }
 
-/* Dark theme variables */
+/* Dark theme variables - Colores mejorados para accesibilidad */
 .dark-theme {
-  --primary-color: #4dabf7;
-  --primary-dark: #339af0;
-  --secondary-color: #495057;
-  --light-color: #212529;
-  --dark-color: #e9ecef;
-  --gray-light: #343a40;
-  --gray-medium: #495057;
-  --gray-dark: #adb5bd;
-  --text-color: #f8f9fa;
-  --text-light: #dee2e6;
-  --text-dark: #f8f9fa;
+  --primary-color: #4dabf7; /* Mantenido */
+  --primary-dark: #339af0; /* Mantenido */
+  --secondary-color: #495057; /* Mantenido */
+  --light-color: #212529; /* Mantenido */
+  --dark-color: #e9ecef; /* Mantenido */
+  --gray-light: #343a40; /* Mantenido */
+  --gray-medium: #adb5bd; /* Aclarado para mejor contraste en modo oscuro */
+  --gray-dark: #ced4da; /* Aclarado para mejor contraste en modo oscuro */
+  --text-color: #f8f9fa; /* Mantenido */
+  --text-light: #e9ecef; /* Aclarado para mejor contraste en modo oscuro */
+  --text-dark: #f8f9fa; /* Mantenido */
   background-color: #212529;
   color: #f8f9fa;
 }
@@ -106,7 +106,6 @@ ol {
   list-style-position: inside;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -155,7 +154,7 @@ section {
   border-radius: var(--radius-sm);
   cursor: pointer;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700; /* Mejorado para accesibilidad */
   text-align: center;
   transition: background-color var(--transition-fast),
     transform var(--transition-fast);
@@ -186,10 +185,11 @@ section {
 #navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-md);
 }
 
 .logo a {
-  padding-left: 20px;
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
@@ -274,18 +274,21 @@ section {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Mejorar contraste en subtítulo */
 .subtitle {
   font-size: 1.25rem;
-  color: var(--primary-color);
+  color: #56ccf2; /* Azul más claro para mejor contraste sobre fondo oscuro */
   margin-bottom: var(--spacing-md);
+  font-weight: 600; /* Añadido para mejorar legibilidad */
 }
 
+/* Mejorar contraste en sección de ubicación */
 .location {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
-  color: var(--gray-medium);
+  color: #e0e0e0; /* Aclarado para mejor contraste sobre fondo oscuro */
 }
 
 .social-links {
@@ -364,6 +367,7 @@ section {
   border-radius: var(--radius-md);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-md);
+  background-color: white;
 }
 
 .timeline-date {
@@ -372,10 +376,12 @@ section {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Mejorar contraste en la empresa */
 .company {
   font-style: italic;
-  color: var(--text-light);
+  color: var(--text-color); /* Cambiado para mejor contraste */
   margin-bottom: var(--spacing-md);
+  font-weight: 500; /* Añadido para mejorar legibilidad */
 }
 
 /* === Education Section === */
@@ -389,6 +395,7 @@ section {
   box-shadow: var(--shadow-md);
   max-width: 800px;
   margin: 0 auto;
+  background-color: white;
 }
 
 .institution {
@@ -396,9 +403,11 @@ section {
   color: var(--primary-color);
 }
 
+/* Mejorar contraste en años de educación */
 .years {
-  color: var(--text-light);
+  color: var(--text-color); /* Cambiado para mejor contraste */
   margin-bottom: var(--spacing-md);
+  font-weight: 500; /* Añadido para mejorar legibilidad */
 }
 
 /* === Skills Section === */
@@ -486,13 +495,16 @@ section {
   gap: var(--spacing-sm);
 }
 
+/* Mejorar contraste en botones de filtro */
 .filter-btn {
   padding: 0.5rem 1rem;
   background-color: var(--gray-light);
-  border: 1px solid var(--gray-medium);
+  border: 1px solid var(--gray-dark); /* Oscurecido para mejor contraste */
+  color: var(--text-color); /* Añadido para asegurar buen contraste */
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all var(--transition-fast);
+  font-weight: 500; /* Añadido para mejorar legibilidad */
 }
 
 .filter-btn.active,
@@ -552,8 +564,9 @@ section {
   margin-bottom: var(--spacing-sm);
 }
 
+/* Mejorar contraste en descripción de proyecto */
 .project-description {
-  color: var(--text-light);
+  color: var(--text-color); /* Cambiado para mejor contraste */
   margin-bottom: var(--spacing-md);
 }
 
@@ -564,7 +577,7 @@ section {
 
 .project-link {
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700; /* Aumentado de 600 para mejorar legibilidad */
 }
 
 .add-project-section {
@@ -642,7 +655,7 @@ section {
 .form-group label {
   display: block;
   margin-bottom: var(--spacing-xs);
-  font-weight: 600;
+  font-weight: 700; /* Aumentado de 600 para mejorar legibilidad */
 }
 
 .form-group input,
@@ -744,14 +757,267 @@ footer {
   font-size: 1.2rem;
 }
 
+/* Mejorar contraste en footer copyright */
 .copyright {
   text-align: center;
   padding-top: var(--spacing-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--gray-medium);
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Aumentado de 0.1 a 0.2 para mejor contraste */
+  color: #adb5bd; /* Aclarado para mejor contraste sobre fondo oscuro */
 }
 
 /* === Utilities === */
 .hidden {
   display: none;
+}
+
+/* === Responsive Styles === */
+
+/* Large screens (above 1200px) */
+@media screen and (min-width: 1201px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+/* Medium screens (992px - 1200px) */
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content {
+    gap: var(--spacing-lg);
+  }
+
+  .profile-image-container {
+    flex: 0 0 200px;
+  }
+}
+
+/* Small screens (768px - 991px) */
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 15px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image-container {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .location {
+    justify-content: center;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* Mobile screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  /* Menú hamburguesa */
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-md) 0;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin: var(--spacing-md) 0;
+    margin-left: 0; /* Resetear el margen izquierdo para móviles */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Ajustes para imagen de perfil */
+  .profile-image-container {
+    flex: 0 0 150px;
+  }
+
+  /* Ajustes para timeline */
+  .timeline-item {
+    padding-left: var(--spacing-lg);
+  }
+
+  /* Ajustes para grids */
+  .skills-container,
+  .projects-container,
+  .contact-info-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md); /* Reducir espacio entre elementos */
+  }
+
+  /* Ajustes para botones de filtro */
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-btn {
+    width: 80%;
+    margin-bottom: var(--spacing-xs); /* Añadir espacio entre botones */
+  }
+
+  /* Ajustar el padding en cards para móviles */
+  .timeline-content,
+  .education-card,
+  .skill-category,
+  .project-card,
+  .contact-card,
+  .message-form,
+  .project-form {
+    padding: var(--spacing-md);
+  }
+
+  /* Ajustar tamaño de las imágenes de proyecto para móviles */
+  .project-image {
+    height: 160px;
+  }
+
+  /* Asegurar que los formularios sean más compactos en móvil */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 0.6rem;
+  }
+}
+
+/* Mobile landscape orientation */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .hero-section {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .profile-image-container {
+    flex: 0 0 120px;
+    margin-bottom: 0;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  .location {
+    justify-content: flex-start;
+  }
+
+  /* Ajustar la navegación para landscape */
+  .nav-links {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+/* Correcciones específicas para pantallas muy pequeñas */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+
+  .profile-image-container {
+    flex: 0 0 120px;
+  }
+
+  .project-image {
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Asegurarse de que el menú hamburguesa se muestre correctamente */
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+  }
 }
